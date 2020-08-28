@@ -1,22 +1,29 @@
 <div class="container" id="container-register">
   <div class="text-center register-content">
-    <h1 class="text-center mt-3">Login</h1>
-    <div class="text-center icon-container my-3">
+    <h1 class="text-center mt-3">Register</h1>
+    <div class="text-center icon-container my-2">
       <a><i class="fab fa-facebook-square fa-3x" style="color: #3c1361"></i></a>
       <a><i class="fab fa-twitter-square fa-3x" style="color: #3c1361"></i></a>
     </div>
     <span>or use your account</span>
-    <form action="/users/login" method="POST">
+    <form action="/users/register" method="POST">
+      <div class="form-group mt-3">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name">
+      </div>
       <div class="form-group mt-3">
         <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
       </div>
       <div class="form-group mt-3">
         <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
       </div>
-      <button type="submit" class="btn btn-light btn-block btn-login">Login</button>
+      <div class="form-group mt-3">
+        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+          placeholder="Confirm Password">
+      </div>
+      <button type="submit" class="btn btn-light btn-block btn-login">Register</button>
     </form>
     <p class="lead mt-4">
-      No Account? <a href="/users/register">Register</a>
+      No Account? <a href="/users/login">Login</a>
     </p>
   </div>
 </div>
