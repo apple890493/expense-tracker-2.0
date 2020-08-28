@@ -1,0 +1,37 @@
+[
+  {
+    "name": "午餐",
+    "category": "餐飲食品",
+    "date": "2020-07-20",
+    "amount": 70,
+    "chart": "7-11"
+  },
+  {
+    "name": "書-1984",
+    "category": "休閒娛樂",
+    "date": "2020-07-20",
+    "amount": "300",
+    "chart": "誠品"
+  },
+  {
+    "name": "悠遊卡",
+    "category": "交通出行",
+    "date": "2020-07-19",
+    "amount": 500,
+    "chart": ""
+  },
+  {
+    "name": "吸塵器",
+    "category": "家居物業",
+    "date": "2020-07-19",
+    "amount": 6000,
+    "chart": "Bicamera"
+  },
+  {
+    "name": "保險",
+    "category": "家居物業",
+    "date": "2020-07-20",
+    "amount": 20000,
+    "chart": "富邦"
+  }
+]

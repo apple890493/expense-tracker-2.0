@@ -1,0 +1,101 @@
+<div class="container" id="container">
+  <div class="left-container">
+    <a style="font-size:50px">
+      <i class="fas fa-dollar-sign"></i>
+      {{totalAmount}}</a>
+  </div>
+  <div class="right-container">
+    <div class="right-container-top">
+      <form action="/filter/">
+        <div class="btn-group">
+          <input type="month" id="start" name="month" min="2018-03" value="">
+          {{!-- 
+          <button type="button" id="btn-filter" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Month <i class="fas fa-sort"></i>
+          </button>
+          <div class="dropdown-menu scroll-menu">
+            <button class="dropdown-item" name="month" value="all">All</button>
+            {{#each months}}
+            <button class="dropdown-item" name="month" value="{{this}}">{{this}}</button>
+            {{/each}}
+          </div> --}}
+        </div>
+
+        {{!-- 選擇 --}}
+        <div class="btn-group">
+          <button type="button" id="btn-filter" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Sort <i class="fas fa-filter fa-sm"></i>
+          </button>
+          <div class="dropdown-menu scroll-menu">
+            <button class="dropdown-item" name="sort" value="all">All</button>
+            {{#each categories}}
+            <button class="dropdown-item" name="sort" value="{{this.title}}"><i class="{{this.icon}}"></i>
+              {{this.title}}</button>
+            {{/each}}
+          </div>
+        </div>
+      </form>
+    </div>
+
+    {{!-- 內容 --}}
+    <div class="form-group">
+
+      {{#each records}}
+      <div class="list-group-item">
+        <div class="d-flex list-content">
+          <div class="left-content">
+            <div class="icon-body mr-4">
+              <span>
+                <i class="
+                {{#match this.category '家居物業'}} fas fa-home {{/match}}
+                {{#match this.category '交通出行'}} fas fa-shuttle-van {{/match}}
+                {{#match this.category '休閒娛樂'}} fas fa-grin-beam {{/match}}
+                {{#match this.category '餐飲食品'}} fas fa-utensils {{/match}}
+                {{#match this.category  '其他'}} fas fa-pen {{/match}}
+                "></i>
+              </span>
+            </div>
+            <div class="text-body">
+              <h5 class="mb-1">{{this.name}}</h5>
+              <small class="mb-1">{{this.chart}}</small>
+              <small class="mb-1">{{this.date}}</small>
+            </div>
+          </div>
+          <div class="right-content mr-4">
+            <i class="fas fa-dollar-sign">
+              {{this.amount}}
+            </i>
+          </div>
+        </div>
+        <div class="content-footer">
+          <a id="btn-edit" href="/expense/{{this._id}}/edit"><i class="fas fa-pen-square"></i></a>
+          <a id="btn-delete" href="#" data-toggle="modal" data-target="#exampleModal{{this._id}}"><i
+              class="fas fa-minus-square"></i></a>
+        </div>
+      </div>
+
+
+      {{!-- 提示 --}}
+      <div class="modal fade" id="exampleModal{{this._id}}" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-exclamation-triangle"></i> 提醒</h5>
+            </div>
+            <div class="modal-body">
+              確定刪除此筆 {{this.date}}{{this.name}} 紀錄嗎?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-back" data-dismiss="modal">Close</button>
+              <form action="/expense/{{this._id}}?_method=DELETE" method="POST">
+                <button class="btn btn-danger btn-delete" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
