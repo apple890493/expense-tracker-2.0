@@ -3,6 +3,8 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const Handlebars = require('handlebars') //導入handlebars
 const bodyParser = require('body-parser') //導入body-parser解析req.body
+const session = require('express-session')
+
 const methodOverride = require('method-override')
 
 require('./config/mongoose')
@@ -13,9 +15,20 @@ const PORT = process.env.PORT || 3000
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+
+app.use(session({
+  secret: 'ThisIsExpense',
+  resave: false,
+  saveUninitialized: true,
+}))
+
+
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+
+
+
 
 app.use(routes)
 
