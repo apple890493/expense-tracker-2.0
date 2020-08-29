@@ -36,12 +36,10 @@ main {
 
 #btn-create2 {
 	border-radius: 15px;
-	border: 1px solid #3c1361;
-	background-color: #3c1361;
+	border: 1px solid #E1bee7;
+	background-color: #E1bee7;;
 	color: #FFFFFF;
   font-weight: bold;
-  font-size: 15px;
-	padding: 12px 30px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
@@ -60,6 +58,17 @@ color: #9e7bb5;
 #btn-delete i{
 color: #A1045a;
 font-size: 1.8em;
+}
+
+.btn-status {
+  border-radius: 15px;
+	border: 1px solid #f8bbd0;;
+	background-color: #f8bbd0;
+	color: #FFFFFF;
+  font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
 }
 
 .btn-create {
@@ -184,15 +193,10 @@ font-size: 1.8em;
 
 #btn-create2 {
 	border-radius: 20px;
-	border: 1px solid #3c1361;
-	background-color: #3c1361;
-  color: #FFFFFF;
-  font-size: 15px;
-	font-weight: bold;
-	padding: 10px 15px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+}
+
+.btn-status {
+  border-radius: 20px;
 }
 
 #btn-filter {
