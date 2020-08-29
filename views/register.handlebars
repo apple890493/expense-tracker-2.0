@@ -6,6 +6,7 @@
       <a><i class="fab fa-twitter-square fa-3x" style="color: #3c1361"></i></a>
     </div>
     <span>or use your account</span>
+    {{> message}}
     <form action="/users/register" method="POST">
       <div class="form-group mt-3">
         <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" value="{{name}}">
@@ -23,7 +24,7 @@
       </div>
       <button type="submit" class="btn btn-light btn-block btn-login">Register</button>
     </form>
-    <p class="lead mt-4">
+    <p class="lead mt-2">
       No Account? <a href="/users/login">Login</a>
     </p>
   </div>
