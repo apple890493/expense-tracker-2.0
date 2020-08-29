@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/expense-tracker'
 
 if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
+  require('dotenv').config();
 }
-
 
 //MongoDB
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+
 //mongoose 連線狀況
 const db = mongoose.connection
 

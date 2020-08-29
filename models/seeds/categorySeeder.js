@@ -1,6 +1,10 @@
 const db = require('../../config/mongoose')
 const Category = require('../category')
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
 db.once('open', () => {
   Category.create(
     {
@@ -22,8 +26,16 @@ db.once('open', () => {
     {
       title: "其他",
       icon: "fas fa-pen"
-    }
-  )
-  console.log('categorySeeder done!')
+    },
+    {
+      title: "收益",
+      icon: "fas fa-hand-holding-usd"
+    })
+    .then(() => {
+      console.log('categorySeeder done!')
+      db.close()
+    })
+    .catch(err => console.log(err))
 })
+
 

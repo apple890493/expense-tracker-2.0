@@ -175,6 +175,11 @@ font-size: 1.8em;
 		border-color: #663a82;
 }
 
+.fa-hand-holding-usd {
+  color: #fcd12a;
+}
+
+
 @media (max-width: 600px) {
 
   #container {

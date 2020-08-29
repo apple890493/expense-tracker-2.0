@@ -7,6 +7,10 @@ const Category = require('../../models/category')
 router.get('/', (req, res) => {
   const userId = req.user._id
   let totalAmount = 0
+  let income = 0
+  let expense = 0
+  let incomeList = []
+  let expenseList = []
   const title = req.query.sort
   const month = req.query.month
   const months = []
@@ -33,7 +37,16 @@ router.get('/', (req, res) => {
         .lean()
         .sort({ date: '1' })
         .then(records => {
-          totalAmount += records.map(record => record.amount).reduce((a, b) => { return a + b }, 0)
+          records.forEach(record => {
+            if (record.category === '收益') {
+              incomeList.push(record.amount)
+            } else {
+              expenseList.push(record.amount)
+            }
+          })
+          income += incomeList.reduce((a, b) => { return a + b }, 0)
+          expense += expenseList.reduce((a, b) => { return a + b }, 0)
+          totalAmount += income - expense
 
           Category.find()
             .lean()
