@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/expense-tracker'
 
+
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
