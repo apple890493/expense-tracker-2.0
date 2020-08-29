@@ -5,10 +5,10 @@ const Record = require('../../models/record')
 const Category = require('../../models/category')
 
 router.get('/', (req, res) => {
+  const userId = req.user._id
   let totalAmount = 0
   const title = req.query.sort
   const month = req.query.month
-  console.log(title, month)
   const months = []
   let dataList = {}
 
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     dataList = { $and: [{ category: title }, { date: { $regex: month } }] }
   }
 
-  Record.find()
+  Record.find({ userId })
     .lean()
     .then(records => {
       records.forEach(record => {

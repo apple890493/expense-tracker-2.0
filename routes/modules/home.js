@@ -6,10 +6,11 @@ const record = require('../../models/record')
 
 //all view
 router.get('/', (req, res) => {
+  const userId = req.user._id
   let totalAmount = 0
   const months = []
 
-  Record.find()
+  Record.find({ userId })
     .lean()
     .sort({ date: '1' })
     .then(records => {
