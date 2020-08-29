@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
         if (!months.includes(date)) {
           months.push(date)
         }
-      });
+      })
       Category.find()
         .lean()
         .sort({ _id: '1' })
