@@ -98,11 +98,9 @@ font-size: 1.8em;
 	background-size: cover;
 	background-position: 0 0;
   color: #FFFFFF;
-}
-
-.left-container a{
   font-family: Impact;
 }
+
 
 .right-container {
   border:1px solid #bca0dc;
@@ -241,11 +239,9 @@ font-size: 1.5em;
 	background-size: cover;
 	background-position: 0 0;
   color: #FFFFFF;
+  font-family: Times, Times New Roman, Georgia, serif;
 }
 
-.left-container a {
-  font-family:  'Montserrat', sans-serif;
-}
 
 .right-container {
   border:1px solid #bca0dc;

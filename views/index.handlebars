@@ -1,25 +1,13 @@
 <div class="container" id="container">
   <div class="left-container">
     <h3>Total:</h3>
-    <a style="font-size:50px">
-      {{!-- <i class="fas fa-dollar-sign"></i> --}}
-      {{totalAmount}}</a>
+    <a style="font-size:50px"> {{totalAmount}}</a>
   </div>
   <div class="right-container">
     <div class="right-container-top">
       <form action="/filter/">
         <div class="btn-group">
-          <input type="month" id="start" name="month" min="2018-03" value="">
-          {{!-- 
-          <button type="button" id="btn-filter" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Month <i class="fas fa-sort"></i>
-          </button>
-          <div class="dropdown-menu scroll-menu">
-            <button class="dropdown-item" name="month" value="all">All</button>
-            {{#each months}}
-            <button class="dropdown-item" name="month" value="{{this}}">{{this}}</button>
-            {{/each}}
-          </div> --}}
+          <input type="month" id="start" name="month" min="2018-03" value="2020-08">
         </div>
 
         {{!-- 選擇 --}}
