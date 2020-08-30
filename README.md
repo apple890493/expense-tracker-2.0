@@ -8,7 +8,7 @@
 <img width="150" height="150" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/1.JPG"/>
 <img width="150" height="150" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/3.JPG"/>
 
-## RWD - 手機尺寸
+## RWD - 手機尺寸(6/8/plus)
 <img width="150" height="150" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/2.JPG"/>
 <img width="150" height="150" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/4.JPG"/>
 

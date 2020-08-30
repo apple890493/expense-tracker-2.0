@@ -1,7 +1,8 @@
 <div class="container" id="container">
   <div class="left-container">
+    <h3>Total:</h3>
     <a style="font-size:50px">
-      <i class="fas fa-dollar-sign"></i>
+      {{!-- <i class="fas fa-dollar-sign"></i> --}}
       {{totalAmount}}</a>
   </div>
   <div class="right-container">
@@ -57,7 +58,9 @@
               </span>
             </div>
             <div class="text-body">
-              <h5 class="mb-1">{{this.name}}</h5>
+              <a id="btn-edit" href="/expense/{{this._id}}/edit">
+                <h5 class="mb-1">{{this.name}}</h5>
+              </a>
               <small class="mb-1">{{this.chart}}</small>
               <small class="mb-1">{{this.date}}</small>
             </div>
@@ -69,7 +72,7 @@
           </div>
         </div>
         <div class="content-footer">
-          <a id="btn-edit" href="/expense/{{this._id}}/edit"><i class="fas fa-pen-square"></i></a>
+          {{!-- <a id="btn-edit" href="/expense/{{this._id}}/edit"><i class="fas fa-pen-square"></i></a> --}}
           <a id="btn-delete" href="#" data-toggle="modal" data-target="#exampleModal{{this._id}}"><i
               class="fas fa-minus-square"></i></a>
         </div>

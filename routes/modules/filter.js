@@ -35,7 +35,7 @@ router.get('/', (req, res) => {
       })
       Record.find(dataList)
         .lean()
-        .sort({ date: '1' })
+        .sort({ date: '-1' })
         .then(records => {
           records.forEach(record => {
             if (record.category === '收益') {

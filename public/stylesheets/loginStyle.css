@@ -79,4 +79,9 @@
 		height: 530px;
 		font-family: 'Georgia';
 	}
+
+	.left-container a{
+  font-family: 'Montserrat', sans-serif;
+	}
 }
+
