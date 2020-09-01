@@ -1,16 +1,15 @@
 
+
 # 簡約記帳簿
 以Express & Node.js打造的簡約記帳本
 串接驗證系統及第三方登入,提供用戶擁有自己記帳冊
 
 
 ## RWD - 網頁尺寸
-<img width="300" height="300" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/1.JPG"/>
-<img width="300" height="300" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/3.JPG"/>
+<img width="300" height="200" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/pic/1.JPG"/> <img width="300" height="200" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/pic/2.JPG"/>
 
 ## RWD - 手機尺寸(6/8/plus)
-<img width="300" height="300" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/2.JPG"/>
-<img width="300" height="300" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/4.JPG"/>
+<img width="150" height="200" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/pic/4.JPG"/> <img width="150" height="200" src="https://github.com/apple890493/expense-tracker-2.0/blob/master/pic/3.JPG"/>
 
 ## 功能列表
 - 可以依照類別查看支出及該類別總支出/總收入
