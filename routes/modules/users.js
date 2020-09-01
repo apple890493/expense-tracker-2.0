@@ -15,6 +15,23 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: true
 }))
 
+
+// router.post('/login', (req, res, next) => {
+//   let errors = []
+//   passport.authenticate('local', (err, user, cb) => {
+//     console.log(cb.message)
+//     if (err) {
+//       if (cb.message === "email") {
+//         errors.push({ message: '此用戶尚未註冊!' })
+//       } else if (cb.message === "passwd") {
+//         errors.push({ message: '帳號或密碼不相符' })
+//       }
+//       return res.render('login', { errors })
+//     }
+//     return res.redirect('/')
+//   })(req, res, next)
+// })
+
 router.get('/register', (req, res) => {
   res.render('register')
 })

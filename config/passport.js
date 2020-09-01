@@ -35,19 +35,20 @@ module.exports = app => {
   }))
 
 
-  passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+  passport.use(new LocalStrategy({ usernameField: 'email', passReqToCallback: true }, (req, email, password, done) => {
     User.findOne({ email })
       .then(user => {
         if (!user) {
-          return done(null, false, { message: '此用戶尚未註冊!' })
+          return done(null, false, { message: "emile" })
         }
         return bcrypt.compare(password, user.password)
           .then(isMatch => {
             if (!isMatch) {
-              return done(null, false, { message: '帳號或密碼不相符' })
+              return done(null, false, { message: "passwd" })
             }
             return done(null, user)
           })
+          .catch(err => done(err, false))
       })
       .catch(err => done(err, false))
   }))
