@@ -39,7 +39,7 @@ module.exports = app => {
     User.findOne({ email })
       .then(user => {
         if (!user) {
-          return done(null, false, { message: "emile" })
+          return done(null, false, { message: "email" })
         }
         return bcrypt.compare(password, user.password)
           .then(isMatch => {

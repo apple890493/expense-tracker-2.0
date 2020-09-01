@@ -9,28 +9,24 @@ router.get('/login', (req, res) => {
   res.render('login')
 })
 
-router.post('/login', passport.authenticate('local', {
-  successRedirect: '/',
-  failureRedirect: '/users/login',
-  failureFlash: true
-}))
-
-
-// router.post('/login', (req, res, next) => {
-//   let errors = []
-//   passport.authenticate('local', (err, user, cb) => {
-//     console.log(cb.message)
-//     if (err) {
-//       if (cb.message === "email") {
-//         errors.push({ message: '此用戶尚未註冊!' })
-//       } else if (cb.message === "passwd") {
-//         errors.push({ message: '帳號或密碼不相符' })
-//       }
-//       return res.render('login', { errors })
-//     }
-//     return res.redirect('/')
-//   })(req, res, next)
-// })
+router.post('/login', (req, res, next) => {
+  let errors = []
+  passport.authenticate('local', (err, user, cb) => {
+    req.logIn(user, err => {
+      if (err) {
+        if (cb.message === "email") {
+          errors.push({ message: '此用戶尚未註冊!' })
+        } else if (cb.message === "passwd") {
+          errors.push({ message: '帳號或密碼不相符' })
+        }
+        if (errors.length) {
+          return res.render('login', { errors })
+        }
+      }
+      return res.redirect('/')
+    })
+  })(req, res, next);
+})
 
 router.get('/register', (req, res) => {
   res.render('register')
@@ -46,6 +42,7 @@ router.post('/register', (req, res) => {
   if (password !== confirmPassword) {
     errors.push({ message: '密碼不相符!' })
   }
+  console.log(errors)
   if (errors.length) {
     return res.render('register', {
       errors,
