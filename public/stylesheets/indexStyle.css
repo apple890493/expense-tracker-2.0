@@ -163,8 +163,12 @@ font-size: 1.8em;
   justify-content: center;
 }
 
-.card-body .form-group :focus {
+.card-body input:focus {
 		border-color: #663a82;
+}
+
+.card-body input {
+  margin: 10px 0;
 }
 
 .fa-hand-holding-usd {

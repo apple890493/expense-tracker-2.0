@@ -1,4 +1,5 @@
 
+
 #container-login {
 	background-color: #fff;
 	border-radius: 10px;
@@ -31,10 +32,12 @@
 
 #container-login input, #container-register input {
 	background-color: #eee;
+	margin: 10% 0px;
+	
 }
 
 #container-login .form-control:focus, #container-register .form-control:focus {
-		border-color: #7c5295;
+	border-color: #7c5295;
 }
 
 .btn-login {

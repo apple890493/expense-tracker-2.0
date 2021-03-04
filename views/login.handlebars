@@ -8,12 +8,11 @@
     <span>or use your account</span>
     {{> message}}
     <form action="/users/login" method="POST">
-      <div class="form-group mt-3">
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
-      </div>
-      <div class="form-group mt-3">
-        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
-      </div>
+
+      <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+
+      <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
+
       <button type="submit" class="btn btn-light btn-block btn-login">Login</button>
     </form>
     <p class="lead mt-4">
