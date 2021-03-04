@@ -19,7 +19,7 @@
 ## 種子資料
 | Account     | 	Password |  
 | ---------- | :----------- |
-| user1@example.com     | 123   |
+| user@example.com     | 123   |
 
 
 ### 啟動方式
